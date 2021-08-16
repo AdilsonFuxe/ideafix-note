@@ -1,0 +1,91 @@
+main {
+  flex: 1;
+  padding: 30px 20px;
+  border-left: 2px solid #ff7603;
+}
+
+main strong {
+  font-size: 20px;
+  display: block;
+  color: #8a3695;
+}
+
+main ul {
+  margin-top: 30px;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+@media (max-width: 1070px) {
+  main ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  main ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 570px) {
+  main ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 570px) {
+  main ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+li.note-item {
+  background: #f4f5f7;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+li.note-item header {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.note-item strong {
+  display: block;
+  font-size: 16px;
+  color: #b7e1df;
+}
+
+li.note-item p {
+  color: #666;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+li.note-item button {
+  background: #777;
+  border: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 95%;
+  cursor: pointer;
+}
