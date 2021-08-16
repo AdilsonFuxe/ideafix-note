@@ -1,10 +1,8 @@
 import React from 'react';
-
-import './global.css';
 import './app.css';
 import './sidebar.css';
 import './main.css';
-import { NoteForm, NoteItem } from './components';
+import { NoteForm, NoteItem } from '../../components';
 
 function App() {
   return (
