@@ -1,13 +1,27 @@
 import React from 'react';
+import { Note } from '../../domain/models';
 
-function NoteItem() {
+type NoteItemProps = {
+  note: Note;
+  onClick: (id: string) => Promise<void>;
+};
+
+function NoteItem(props: NoteItemProps) {
+  const { note, onClick } = props;
   return (
     <li className="note-item">
       <header>
-        <strong>Tarefa IdeiaFix</strong>
+        <strong>{note.title}</strong>
       </header>
-      <p>terminar o back e o front</p>
-      <button id="close-button">X</button>
+      <p>{note.description}</p>
+      <button
+        id="close-button"
+        onClick={() => {
+          onClick(note.id).then();
+        }}
+      >
+        X
+      </button>
     </li>
   );
 }
